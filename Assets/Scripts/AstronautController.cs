@@ -20,6 +20,8 @@ namespace Astronaut
 
         [SerializeField] LayerMask fixPointLayer;
 
+        bool dampen = false;
+
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -31,6 +33,9 @@ namespace Astronaut
             //camAngleAdjust = Vector3.SignedAngle(camera.forward, transform.forward, transform.right);
             if (Input.GetKeyDown(KeyCode.Joystick1Button5))
                 TryFixNearby();
+
+            if (Input.GetKeyDown(KeyCode.Joystick1Button4))
+                dampen = !dampen;
         }
 
         private void FixedUpdate()
@@ -40,10 +45,13 @@ namespace Astronaut
             translation.z = Input.GetAxisRaw("Vertical");
             rotation.x = Input.GetAxisRaw("LookUp");
             rotation.y = Input.GetAxisRaw("LookRight");
-            
-            rb.AddTorque(-rb.angularVelocity * angularDamp * Time.deltaTime);
+
+            if (dampen)
+                rb.AddTorque(-rb.angularVelocity * angularDamp * Time.deltaTime);
             rb.AddRelativeTorque(rotation * torquePower * Time.fixedDeltaTime);
-            rb.AddForce(-rb.velocity * translationDamp * Time.fixedDeltaTime);
+
+            if (dampen)
+                rb.AddForce(-rb.velocity * translationDamp * Time.fixedDeltaTime);
             rb.AddRelativeForce(translation * power * Time.fixedDeltaTime);
         }
 
