@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,30 +32,55 @@ namespace Astronaut
 
         Vector3 prevRotation = Vector3.zero;
 
+
+        //Health and status
+        [SerializeField] Slider oxygenSlider;
+        Image oxygenSliderImg;
+        [SerializeField] Slider fuelSlider;
+        Image fuelSliderImg;
+
+        private readonly float maxFuel = 100f;
+        private readonly float maxOxygen = 100f;
+
+        float fuel = 100f;
+        float oxygen = 100f;
+
+        float oxygenConsumption = 0.6f;
+
+        float torqueFuelConsumption = 0.07f;
+        float translationFuelConsumption = 0.013f;
+
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
             anim = new AstronautAnimController(GetComponentInChildren<Animator>());
+
+            oxygenSliderImg = oxygenSlider.transform.Find("Fill Area/Fill").GetComponent<Image>();
+            fuelSliderImg = fuelSlider.transform.Find("Fill Area/Fill").GetComponent<Image>();
+
+            PaintSliders();
         }
 
         void Update()
         {
-            Debug.DrawRay(transform.position, rb.angularVelocity);
-            //camAngleAdjust = Vector3.SignedAngle(camera.forward, transform.forward, transform.right);
+            if (oxygen <= 0) return;
+
             if (Input.GetKeyDown(KeyCode.Joystick1Button5) || Input.GetKeyDown(KeyCode.Joystick1Button0))
-                TryFixNearby();
+                TryInteractNearby();
         }
 
         private void FixedUpdate()
         {
-            //transform.eulerAngles = cameraTransform.eulerAngles;
+            PaintSliders();
+            if (oxygen <= 0) return;
+
             Vector3 input = Vector3.zero;
             Vector3 translation = Vector3.zero;
 
             //Vertical
             input.y = Input.GetAxisRaw("UpDown");
             translation.y = input.y;
-            
+
             //Horizontal
             input.x = Input.GetAxisRaw("Horizontal");
             Vector3 horizontalDir = cameraTransform.TransformDirection(Vector3.right);
@@ -68,31 +94,48 @@ namespace Astronaut
             //Pitch
             Quaternion pitch = Quaternion.FromToRotation(transform.forward, cameraTransform.forward);
 
-            //Yaw
-            //Roll
-
-            //rb.AddRelativeTorque(pitch.eulerAngles * torquePower * Time.fixedDeltaTime);
-
+            //Roll correction
             Vector3 headingError = Vector3.Cross(transform.forward, cameraTransform.forward) + Vector3.Cross(transform.up, Vector3.up);
-            rb.AddTorque((headingError * torquePower -rb.angularVelocity * angularDamp)  * Time.deltaTime);
-            //transform.LookAt(transform.position + cameraTransform.forward * 10);
+            Vector3 finalTorque = (headingError * torquePower - rb.angularVelocity * angularDamp) * Time.fixedDeltaTime;
 
-            //if (dampen)
-            //    rb.AddForce(-rb.velocity * translationDamp * Time.fixedDeltaTime);
             translation.Normalize();
-            rb.AddForce(translation * power * Time.fixedDeltaTime);
+            Vector3 finalTranslation = translation * power * Time.fixedDeltaTime;
 
-            Vector3 animDir = transform.InverseTransformDirection(translation);
-            anim.Forward(animDir.z);
-            anim.Right(-animDir.x);
-            anim.Up(animDir.y);
-            float rightRot = Vector3.Dot(transform.up, rb.angularVelocity);
-            anim.TurnRight(rightRot);
+            //Apply thrusters
+            if (fuel > 0)
+            {
+                rb.AddTorque(finalTorque);
+                rb.AddForce(finalTranslation);
 
-            //prevRotation = rotation;
+                Vector3 animDir = transform.InverseTransformDirection(translation);
+                anim.Forward(animDir.z);
+                anim.Right(-animDir.x);
+                anim.Up(animDir.y);
+                float rightRot = Vector3.Dot(transform.up, rb.angularVelocity);
+                anim.TurnRight(rightRot);
+                fuel -= (finalTorque.magnitude * torqueFuelConsumption + finalTranslation.magnitude * translationFuelConsumption) * Time.fixedDeltaTime;
+            }
+
+            oxygen -= oxygenConsumption * Time.fixedDeltaTime;
+
+            oxygenSlider.value = oxygen / maxOxygen;
+            fuelSlider.value = fuel / maxFuel;
         }
 
-        private void TryFixNearby()
+        private void PaintSliders()
+        {
+            float oxygenRate = oxygen / maxOxygen;
+            float noOxygenRate = 1 - oxygenRate;
+            Color oxygenState = new Color(noOxygenRate, oxygenRate, 0);
+            oxygenSliderImg.color = oxygenState;
+
+            float fuelRate = fuel / maxFuel;
+            float noFuelRate = 1 - fuelRate;
+            Color fuelState = new Color(noFuelRate, fuelRate, 0);
+            fuelSliderImg.color = fuelState;
+        }
+
+        private void TryInteractNearby()
         {
             Debug.Log("Trying to fix nearby");
             Collider[] fixPointCols = Physics.OverlapSphere(transform.position, 2f, fixPointLayer.value);
@@ -105,7 +148,22 @@ namespace Astronaut
                     fixPoint.Fix();
                     Debug.Log("Fixed nearby");
                 }
+                else
+                {
+                    Ressuply ressuply = fixPointCol.GetComponent<Ressuply>();
+                    if (ressuply != null)
+                    {
+                        ressuply.RessuplyAstronaut(this);
+                    }
+                }
             }
         }
+
+        public void Ressuply()
+        {
+            fuel = maxFuel;
+            oxygen = maxOxygen;
+        }
+
     }
 }

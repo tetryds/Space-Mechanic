@@ -24,17 +24,21 @@ namespace Astronaut
         float timeToBreak;
         float timeToExplode;
 
-        readonly float maxDuration = 30f;
-        readonly float minDuration = 20f;
-        readonly float maxTimeToExplode = 10f;
-        readonly float dmgRateWhenBroken = 30f;
-        readonly float explosionDmg = 500f;
-
-        //readonly float maxDuration = 120f;
-        //readonly float minDuration = 80f;
-        //readonly float maxTimeToExplode = 60f;
+        //Fail fast for testing stats
+        //readonly float maxDuration = 30f;
+        //readonly float minDuration = 20f;
+        //readonly float maxTimeToExplode = 10f;
         //readonly float dmgRateWhenBroken = 30f;
         //readonly float explosionDmg = 500f;
+
+        readonly float maxDuration = 150f;
+        readonly float minDurarion = 100f;
+
+        float duration = 150f;
+        readonly float minRepair = 0.66f;
+        readonly float maxTimeToExplode = 30f;
+        readonly float dmgRateWhenBroken = 18f;
+        readonly float explosionDmg = 500f;
 
         StationController station;
 
@@ -59,16 +63,11 @@ namespace Astronaut
                 {
                     Break();
                 }
-                float fixRate = timeToBreak / maxDuration;
+                float fixRate = timeToBreak / duration;
                 float breakRate = 1 - fixRate;
                 Color currentState = new Color(breakRate, fixRate, 0);
                 healthSlider.value = fixRate;
                 SetColors(currentState);
-                //materialProperty.SetColor("_BaseColor", currentState);
-                //matRenderer.SetPropertyBlock(materialProperty);
-
-                //sliderImage.color = currentState;
-                //targetIndicator.SetColor(currentState);
             }
             else
             {
@@ -89,13 +88,11 @@ namespace Astronaut
             explosion.Play();
             exploded = true;
             SetColors(Color.black);
-            Debug.Log("Boom");
         }
 
         private void Break()
         {
             smoke.Play();
-            Debug.Log("Broke");
             broken = true;
         }
 
@@ -113,9 +110,10 @@ namespace Astronaut
         {
             if (exploded) return;
 
+            duration = Random.Range(minDurarion, maxDuration);
             smoke.Stop();
             Debug.Log("Fixed");
-            timeToBreak = Random.Range(minDuration, maxDuration);
+            timeToBreak = Random.Range(minRepair * duration, duration);
             timeToExplode = maxTimeToExplode;
             broken = false;
         }
