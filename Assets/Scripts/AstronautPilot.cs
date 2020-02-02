@@ -27,8 +27,6 @@ namespace Astronaut
 
         AstronautAnimController anim;
 
-        [SerializeField] Toggle isDamping;
-
         [SerializeField] Transform cameraTransform;
 
         Vector3 prevRotation = Vector3.zero;
@@ -43,14 +41,8 @@ namespace Astronaut
         {
             Debug.DrawRay(transform.position, rb.angularVelocity);
             //camAngleAdjust = Vector3.SignedAngle(camera.forward, transform.forward, transform.right);
-            if (Input.GetKeyDown(KeyCode.Joystick1Button5))
+            if (Input.GetKeyDown(KeyCode.Joystick1Button5) || Input.GetKeyDown(KeyCode.Joystick1Button0))
                 TryFixNearby();
-
-            if (Input.GetKeyDown(KeyCode.Joystick1Button4))
-            {
-                dampen = !dampen;
-                isDamping.isOn = dampen;
-            }
         }
 
         private void FixedUpdate()

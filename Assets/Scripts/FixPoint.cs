@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Astronaut
 {
     public class FixPoint : MonoBehaviour
     {
+        [SerializeField] Slider healthSlider;
+        Image sliderImage;
+
         Renderer matRenderer = null;
         MaterialPropertyBlock materialProperty;
 
@@ -24,6 +28,8 @@ namespace Astronaut
             timeToExplode = maxTimeToExplode;
             materialProperty = new MaterialPropertyBlock();
             matRenderer = GetComponent<Renderer>();
+
+            sliderImage = healthSlider.transform.Find("Fill Area/Fill").GetComponent<Image>();
         }
 
         private void FixedUpdate()
@@ -36,8 +42,14 @@ namespace Astronaut
                 {
                     Break();
                 }
-                materialProperty.SetColor("_BaseColor", new Color(1 - timeToBreak / maxDuration, timeToBreak / maxDuration, 0));
+                float fixRate = timeToBreak / maxDuration;
+                float breakRate = 1 - fixRate;
+                Color currentState = new Color(breakRate, fixRate, 0);
+                materialProperty.SetColor("_BaseColor", currentState);
                 matRenderer.SetPropertyBlock(materialProperty);
+
+                healthSlider.value = fixRate;
+                sliderImage.color = currentState;
             }
             else
             {
