@@ -81,8 +81,8 @@ namespace Astronaut
 
             //rb.AddRelativeTorque(pitch.eulerAngles * torquePower * Time.fixedDeltaTime);
 
-            Vector3 headingError = Vector3.Cross(transform.forward, cameraTransform.forward);
-            rb.AddTorque(headingError * torquePower * Time.deltaTime);
+            Vector3 headingError = Vector3.Cross(transform.forward, cameraTransform.forward) + Vector3.Cross(transform.up, Vector3.up);
+            rb.AddTorque((headingError * torquePower -rb.angularVelocity * angularDamp)  * Time.deltaTime);
             //transform.LookAt(transform.position + cameraTransform.forward * 10);
 
             //if (dampen)
@@ -91,10 +91,11 @@ namespace Astronaut
             rb.AddForce(translation * power * Time.fixedDeltaTime);
 
             Vector3 animDir = transform.InverseTransformDirection(translation);
-            //anim.Forward(translation.z);
-            //anim.Right(-translation.x);
+            anim.Forward(animDir.z);
+            anim.Right(-animDir.x);
             anim.Up(animDir.y);
-            //anim.TurnRight(rotation.y);
+            float rightRot = Vector3.Dot(transform.up, rb.angularVelocity);
+            anim.TurnRight(rightRot);
 
             //prevRotation = rotation;
         }

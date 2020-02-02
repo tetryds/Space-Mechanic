@@ -330,10 +330,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845bfa40a1be56048b48249c857a0a57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 2000
-  torquePower: 200
+  power: 4000
+  torquePower: 600
   translationDamp: 500
-  angularDamp: 120
+  angularDamp: 320
   rotDerivativeGain: 0.8
   fixPointLayer:
     serializedVersion: 2
