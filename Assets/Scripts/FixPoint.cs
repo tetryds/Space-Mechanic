@@ -10,6 +10,8 @@ namespace Astronaut
         [SerializeField] Slider healthSlider;
         Image sliderImage;
 
+        [SerializeField] TargetIndicator targetIndicator;
+
         Renderer matRenderer = null;
         MaterialPropertyBlock materialProperty;
 
@@ -18,12 +20,17 @@ namespace Astronaut
         float timeToBreak;
         float timeToExplode;
 
-        float maxDuration = 120f;
-        float minDuration = 60f;
-        float maxTimeToExplode = 60f;
+        readonly float maxDuration = 120f;
+        readonly float minDuration = 80f;
+        readonly float maxTimeToExplode = 60f;
+        readonly float dmgRateWhenBroken = 30f;
+        readonly float explosionDmg = 500f;
+
+        StationController station;
 
         private void Start()
         {
+            station = transform.parent.GetComponent<StationController>();
             Fix();
             timeToExplode = maxTimeToExplode;
             materialProperty = new MaterialPropertyBlock();
@@ -50,9 +57,11 @@ namespace Astronaut
 
                 healthSlider.value = fixRate;
                 sliderImage.color = currentState;
+                targetIndicator.SetColor(currentState);
             }
             else
             {
+                station.Hit(dmgRateWhenBroken * Time.fixedDeltaTime);
                 timeToExplode -= Time.fixedDeltaTime;
                 if (timeToExplode <= 0)
                 {
@@ -63,6 +72,7 @@ namespace Astronaut
 
         private void Explode()
         {
+            station.Hit(explosionDmg);
             Debug.Log("Boom");
         }
 

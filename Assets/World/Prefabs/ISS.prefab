@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4132405137740327449}
   - component: {fileID: 7863961863948646227}
   - component: {fileID: 6140431025622065034}
+  - component: {fileID: 6053153032978592041}
   m_Layer: 0
-  m_Name: Cube.011
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,6 +94,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -153830957423991239, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &6053153032978592041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87309885001191485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &291595364659441806
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +119,7 @@ GameObject:
   - component: {fileID: 864556150836834672}
   - component: {fileID: 5781105471060437395}
   - component: {fileID: 6140431025908513634}
+  - component: {fileID: 5853770271097950620}
   m_Layer: 0
   m_Name: Cylinder.029
   m_TagString: Untagged
@@ -186,6 +201,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 3237064147268127946, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &5853770271097950620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291595364659441806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &598042239367598641
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +226,7 @@ GameObject:
   - component: {fileID: 9206901107434770863}
   - component: {fileID: 846632762034696192}
   - component: {fileID: 6140431026951748824}
+  - component: {fileID: 6736150582828692261}
   m_Layer: 0
   m_Name: Cylinder.018
   m_TagString: Untagged
@@ -279,6 +308,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -1407623660032272785, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &6736150582828692261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598042239367598641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &855173603842363011
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,8 +333,9 @@ GameObject:
   - component: {fileID: 7012580063526899009}
   - component: {fileID: 1865826255384663058}
   - component: {fileID: 6140431026566411041}
+  - component: {fileID: 6839031185632702359}
   m_Layer: 0
-  m_Name: Cube.016
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,6 +415,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 855131390749405241, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &6839031185632702359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855173603842363011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &960308509762675708
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,8 +440,9 @@ GameObject:
   - component: {fileID: 5376266322590668545}
   - component: {fileID: 9010035828909029897}
   - component: {fileID: 6140431026494756093}
+  - component: {fileID: 6369359792289628906}
   m_Layer: 0
-  m_Name: Cube.014
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -465,6 +522,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2865104911859505335, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &6369359792289628906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960308509762675708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &1240729864873201009
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +547,7 @@ GameObject:
   - component: {fileID: 5152509614138837327}
   - component: {fileID: 8546891703007326121}
   - component: {fileID: 6140431027486840800}
+  - component: {fileID: 4900132180125576293}
   m_Layer: 0
   m_Name: Cylinder.042
   m_TagString: Untagged
@@ -558,6 +629,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -7757054454094250264, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &4900132180125576293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240729864873201009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &1449431904368212545
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +655,7 @@ GameObject:
   - component: {fileID: 6627429988600968810}
   - component: {fileID: 6140431027340386169}
   - component: {fileID: 6578771429369797446}
+  - component: {fileID: 4695666576112229205}
   m_Layer: 9
   m_Name: Cube.001
   m_TagString: Untagged
@@ -664,6 +749,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ede78b458b05c46ba05b1d09854e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+--- !u!114 &4695666576112229205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449431904368212545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &1531143519122871721
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +775,7 @@ GameObject:
   - component: {fileID: 3025728650750598080}
   - component: {fileID: 1699796081397901674}
   - component: {fileID: 6140431027377905337}
+  - component: {fileID: 4614086902466868413}
   m_Layer: 0
   m_Name: Cylinder.010
   m_TagString: Untagged
@@ -757,6 +857,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -5731547941117289742, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &4614086902466868413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531143519122871721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &1829945653592621445
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +882,7 @@ GameObject:
   - component: {fileID: 3643127351706786287}
   - component: {fileID: 8328720058234027620}
   - component: {fileID: 6140431025792506512}
+  - component: {fileID: 5499586308698054801}
   m_Layer: 0
   m_Name: Cylinder.025
   m_TagString: Untagged
@@ -850,6 +964,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -4026644384297347843, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &5499586308698054801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829945653592621445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &2022760696481121684
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +989,7 @@ GameObject:
   - component: {fileID: 1623373531603416067}
   - component: {fileID: 7115190902943288271}
   - component: {fileID: 6140431027007636895}
+  - component: {fileID: 5270754585219507330}
   m_Layer: 0
   m_Name: Cylinder.019
   m_TagString: Untagged
@@ -943,6 +1071,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -5746147162638082140, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &5270754585219507330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022760696481121684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &2074583697544977571
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,8 +1096,9 @@ GameObject:
   - component: {fileID: 7649863262200873705}
   - component: {fileID: 8506469020869467896}
   - component: {fileID: 6140431026484577463}
+  - component: {fileID: 5331513869621280183}
   m_Layer: 0
-  m_Name: Cylinder.039
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1036,6 +1178,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7108004245302804196, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &5331513869621280183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074583697544977571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &2171122515845755077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1203,7 @@ GameObject:
   - component: {fileID: 9170156238708930496}
   - component: {fileID: 4114673278914028661}
   - component: {fileID: 6140431027293599616}
+  - component: {fileID: 5410601134277693905}
   m_Layer: 0
   m_Name: Cylinder.030
   m_TagString: Untagged
@@ -1129,6 +1285,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7301738766801530882, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &5410601134277693905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2171122515845755077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &2175296839756157585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1310,7 @@ GameObject:
   - component: {fileID: 5407115916077265203}
   - component: {fileID: 729744264918014192}
   - component: {fileID: 6140431025721741296}
+  - component: {fileID: 5406295990017078149}
   m_Layer: 0
   m_Name: Cylinder.031
   m_TagString: Untagged
@@ -1222,6 +1392,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -7133521204521878831, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &5406295990017078149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2175296839756157585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &2519316046507236668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,8 +1417,9 @@ GameObject:
   - component: {fileID: 2659764306236296861}
   - component: {fileID: 5145860523228187534}
   - component: {fileID: 6140431027134008706}
+  - component: {fileID: 8629277200432331818}
   m_Layer: 0
-  m_Name: Cube.005
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1315,6 +1499,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 2212009239438826721, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &8629277200432331818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519316046507236668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &2681630960571242507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1524,7 @@ GameObject:
   - component: {fileID: 7271785374755707524}
   - component: {fileID: 283564369977138057}
   - component: {fileID: 6140431027267481286}
+  - component: {fileID: 8070486106970126623}
   m_Layer: 0
   m_Name: Cylinder.040
   m_TagString: Untagged
@@ -1408,6 +1606,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -6564495154122040233, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &8070486106970126623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681630960571242507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &2692678658030909895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,6 +1631,7 @@ GameObject:
   - component: {fileID: 6449669969116352608}
   - component: {fileID: 6016673616730201565}
   - component: {fileID: 6140431027288729789}
+  - component: {fileID: 8100112630524483795}
   m_Layer: 0
   m_Name: Cube.008
   m_TagString: Untagged
@@ -1501,6 +1713,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 8552134717624371188, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &8100112630524483795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692678658030909895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &2744623371672945517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,6 +1735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1174742081010921854}
+  - component: {fileID: 8296172668477579897}
   m_Layer: 0
   m_Name: ISS
   m_TagString: Untagged
@@ -1589,6 +1815,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8296172668477579897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744623371672945517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caee65cea9a96764ab346c198bc5b992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
 --- !u!1 &2800382482346671231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,6 +1840,7 @@ GameObject:
   - component: {fileID: 5550088359483187625}
   - component: {fileID: 5327000281435134253}
   - component: {fileID: 6140431026962419638}
+  - component: {fileID: 8352985969172667755}
   m_Layer: 0
   m_Name: Cylinder.026
   m_TagString: Untagged
@@ -1682,6 +1922,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 8530459506952857525, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &8352985969172667755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800382482346671231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &2901488233025366799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,8 +1947,9 @@ GameObject:
   - component: {fileID: 5924189168305374588}
   - component: {fileID: 7227021066351144818}
   - component: {fileID: 6140431027454873382}
+  - component: {fileID: 9039596711342230043}
   m_Layer: 0
-  m_Name: Cylinder.036
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1775,6 +2029,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 6244646720392471139, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &9039596711342230043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901488233025366799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &3096661212777082785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,8 +2054,9 @@ GameObject:
   - component: {fileID: 809129220666095139}
   - component: {fileID: 8106300969313036178}
   - component: {fileID: 6140431026146530097}
+  - component: {fileID: 9209506693462544053}
   m_Layer: 0
-  m_Name: Cube.020
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1868,6 +2136,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 2911736426955009642, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &9209506693462544053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096661212777082785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &3178876407615349665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,8 +2161,9 @@ GameObject:
   - component: {fileID: 2753592512184687645}
   - component: {fileID: 6720792339581051543}
   - component: {fileID: 6140431027119248487}
+  - component: {fileID: 8730951615649694389}
   m_Layer: 0
-  m_Name: Cube.003
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1961,6 +2243,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -8678823145569952518, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &8730951615649694389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3178876407615349665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &3179613980418429312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,8 +2268,9 @@ GameObject:
   - component: {fileID: 973537693310406533}
   - component: {fileID: 1548597463764723390}
   - component: {fileID: 6140431026944884829}
+  - component: {fileID: 8725569718608523414}
   m_Layer: 0
-  m_Name: Cylinder.038
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2054,6 +2350,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -3254591967430720901, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &8725569718608523414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179613980418429312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &3248177038964986265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,8 +2375,9 @@ GameObject:
   - component: {fileID: 1297994354759100806}
   - component: {fileID: 8072455916967422183}
   - component: {fileID: 6140431027610126948}
+  - component: {fileID: 8657298039552258189}
   m_Layer: 0
-  m_Name: Cylinder.033
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2147,6 +2457,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -6987322782937720609, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &8657298039552258189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3248177038964986265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &3647847308159294829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,6 +2483,7 @@ GameObject:
   - component: {fileID: 833072512912041496}
   - component: {fileID: 6140431026252799545}
   - component: {fileID: 833867266547176637}
+  - component: {fileID: 7469484623930014841}
   m_Layer: 9
   m_Name: Cube.002
   m_TagString: Untagged
@@ -2253,6 +2577,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ede78b458b05c46ba05b1d09854e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+--- !u!114 &7469484623930014841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3647847308159294829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &3666633940881200823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,6 +2603,7 @@ GameObject:
   - component: {fileID: 6518892030802540038}
   - component: {fileID: 5600634902847849515}
   - component: {fileID: 6140431027328275387}
+  - component: {fileID: 7482081347641112483}
   m_Layer: 0
   m_Name: Cylinder.023
   m_TagString: Untagged
@@ -2346,6 +2685,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -1982877014985498672, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &7482081347641112483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666633940881200823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &3787260257057266085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2710,7 @@ GameObject:
   - component: {fileID: 7392518532899747623}
   - component: {fileID: 8454388896932087757}
   - component: {fileID: 6140431027278838175}
+  - component: {fileID: 7041444396666878129}
   m_Layer: 0
   m_Name: Cylinder.020
   m_TagString: Untagged
@@ -2439,6 +2792,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -5894421597310714776, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &7041444396666878129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3787260257057266085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &3842957423120341665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,6 +2817,7 @@ GameObject:
   - component: {fileID: 8798915186176126873}
   - component: {fileID: 3730331504076109833}
   - component: {fileID: 6140431026548211740}
+  - component: {fileID: 6945637038073707445}
   m_Layer: 0
   m_Name: Cylinder.022
   m_TagString: Untagged
@@ -2532,6 +2899,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 506893626503705964, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &6945637038073707445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3842957423120341665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &3853847795713190279
 GameObject:
   m_ObjectHideFlags: 0
@@ -2544,6 +2924,7 @@ GameObject:
   - component: {fileID: 3662535774225988729}
   - component: {fileID: 4869335624227236617}
   - component: {fileID: 6140431026435902735}
+  - component: {fileID: 6939113929717844115}
   m_Layer: 0
   m_Name: Cube.013
   m_TagString: Untagged
@@ -2625,6 +3006,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7807538432633192378, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &6939113929717844115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3853847795713190279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &3919391211015066477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +3031,7 @@ GameObject:
   - component: {fileID: 830232382508209796}
   - component: {fileID: 8296553834161906140}
   - component: {fileID: 6140431026212939487}
+  - component: {fileID: 7157144454513783417}
   m_Layer: 0
   m_Name: Cylinder.027
   m_TagString: Untagged
@@ -2718,6 +3113,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 2076067837965943560, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &7157144454513783417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919391211015066477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &4178493779555090276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,6 +3138,7 @@ GameObject:
   - component: {fileID: 384851557788977062}
   - component: {fileID: 6003648243271784596}
   - component: {fileID: 6140431027712341475}
+  - component: {fileID: 7839584462058511986}
   m_Layer: 0
   m_Name: Cube.007
   m_TagString: Untagged
@@ -2811,6 +3220,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -3329902420748629119, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &7839584462058511986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4178493779555090276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &4474387506217301092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,6 +3245,7 @@ GameObject:
   - component: {fileID: 8286792554318904036}
   - component: {fileID: 7707040271387524091}
   - component: {fileID: 6140431026900896082}
+  - component: {fileID: 7723399339655239026}
   m_Layer: 0
   m_Name: Cube.012
   m_TagString: Untagged
@@ -2904,6 +3327,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -5741174448488666723, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &7723399339655239026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4474387506217301092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &4940854785691576619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,8 +3352,9 @@ GameObject:
   - component: {fileID: 3473171990743286958}
   - component: {fileID: 5362807769533414946}
   - component: {fileID: 6140431027263433608}
+  - component: {fileID: 1271774603547199551}
   m_Layer: 0
-  m_Name: Cylinder.035
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2997,6 +3434,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 2237167428214565825, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &1271774603547199551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4940854785691576619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &5138538971258971318
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,6 +3459,7 @@ GameObject:
   - component: {fileID: 8111993445129118337}
   - component: {fileID: 3289847442309062906}
   - component: {fileID: 6140431026031285697}
+  - component: {fileID: 1331078141413705124}
   m_Layer: 0
   m_Name: Cylinder.000
   m_TagString: Untagged
@@ -3090,6 +3541,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7348556155622324996, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &1331078141413705124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138538971258971318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &5180894289444170567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,8 +3566,9 @@ GameObject:
   - component: {fileID: 470194844876972593}
   - component: {fileID: 627789106183799765}
   - component: {fileID: 6140431027189540332}
+  - component: {fileID: 1355876595332500051}
   m_Layer: 0
-  m_Name: Cube.010
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3183,6 +3648,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 8385836491182413749, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &1355876595332500051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5180894289444170567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &5501909034752202552
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,6 +3673,7 @@ GameObject:
   - component: {fileID: 7824786254593552170}
   - component: {fileID: 4663426310209476848}
   - component: {fileID: 6140431027530670096}
+  - component: {fileID: 1832266178103277102}
   m_Layer: 0
   m_Name: Cylinder.004
   m_TagString: Untagged
@@ -3276,6 +3755,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 6255687079079774844, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &1832266178103277102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5501909034752202552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &5568335939890518724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,8 +3780,9 @@ GameObject:
   - component: {fileID: 8165412228981357589}
   - component: {fileID: 1802649606527052647}
   - component: {fileID: 6140431025938134689}
+  - component: {fileID: 1761335664723573714}
   m_Layer: 0
-  m_Name: Cube.004
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3369,6 +3862,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -5053925668127403250, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &1761335664723573714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5568335939890518724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &5782547726112501441
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,6 +3887,7 @@ GameObject:
   - component: {fileID: 7230907064188432563}
   - component: {fileID: 4164984644325914919}
   - component: {fileID: 6140431027582910139}
+  - component: {fileID: 362695872511315925}
   m_Layer: 0
   m_Name: Cylinder.021
   m_TagString: Untagged
@@ -3462,6 +3969,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 6357616769542740209, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &362695872511315925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782547726112501441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &5821257093704273868
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,6 +3994,7 @@ GameObject:
   - component: {fileID: 7541705014442173701}
   - component: {fileID: 7386374955457506944}
   - component: {fileID: 6140431027704805727}
+  - component: {fileID: 431909060079742682}
   m_Layer: 0
   m_Name: Cylinder.012
   m_TagString: Untagged
@@ -3555,6 +4076,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -5308210633308118684, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &431909060079742682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821257093704273868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &5855438479358170854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,6 +4101,7 @@ GameObject:
   - component: {fileID: 2805410971166876257}
   - component: {fileID: 486580870449256931}
   - component: {fileID: 6140431027272489349}
+  - component: {fileID: 321307235494410228}
   m_Layer: 0
   m_Name: Cylinder.041
   m_TagString: Untagged
@@ -3648,6 +4183,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -3410944087502363961, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &321307235494410228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855438479358170854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &5878183797968410085
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,8 +4208,9 @@ GameObject:
   - component: {fileID: 7413675489282868822}
   - component: {fileID: 3385621214309208393}
   - component: {fileID: 6140431027142477095}
+  - component: {fileID: 334586307268916465}
   m_Layer: 0
-  m_Name: Cube.009
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3741,6 +4290,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2477511411847689622, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &334586307268916465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5878183797968410085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &5878301901500049774
 GameObject:
   m_ObjectHideFlags: 0
@@ -3753,8 +4315,9 @@ GameObject:
   - component: {fileID: 2271511231806216486}
   - component: {fileID: 3898381174616710013}
   - component: {fileID: 6140431026137831112}
+  - component: {fileID: 334635346615453820}
   m_Layer: 0
-  m_Name: Cylinder.034
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3834,6 +4397,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -1766265817381194870, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &334635346615453820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5878301901500049774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &5907501428827508421
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,6 +4422,7 @@ GameObject:
   - component: {fileID: 6801558123588365126}
   - component: {fileID: 279499766756807247}
   - component: {fileID: 6140431026968830580}
+  - component: {fileID: 345818656917450705}
   m_Layer: 0
   m_Name: Cylinder.028
   m_TagString: Untagged
@@ -3927,6 +4504,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 986923023805056906, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &345818656917450705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5907501428827508421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &6448093679335503726
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,8 +4529,9 @@ GameObject:
   - component: {fileID: 853487005280752927}
   - component: {fileID: 1823576648138316064}
   - component: {fileID: 6140431027555413208}
+  - component: {fileID: 885813252659861116}
   m_Layer: 0
-  m_Name: Cube.018
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4020,6 +4611,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -5928785198427282456, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &885813252659861116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6448093679335503726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &6864448569961130979
 GameObject:
   m_ObjectHideFlags: 0
@@ -4032,6 +4636,7 @@ GameObject:
   - component: {fileID: 1273393604864680290}
   - component: {fileID: 4794256970881693108}
   - component: {fileID: 6140431026621277920}
+  - component: {fileID: 753326984424884983}
   m_Layer: 0
   m_Name: Cylinder.002
   m_TagString: Untagged
@@ -4113,6 +4718,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 8691780276856062721, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &753326984424884983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864448569961130979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &6868877361589004579
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,6 +4743,7 @@ GameObject:
   - component: {fileID: 6227040682395887484}
   - component: {fileID: 8001882308965595241}
   - component: {fileID: 6140431027116064518}
+  - component: {fileID: 748748646053840951}
   m_Layer: 0
   m_Name: Cylinder.003
   m_TagString: Untagged
@@ -4206,6 +4825,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 6239881831769578202, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &748748646053840951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868877361589004579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &6976119339536014579
 GameObject:
   m_ObjectHideFlags: 0
@@ -4218,8 +4850,9 @@ GameObject:
   - component: {fileID: 6804059070310797449}
   - component: {fileID: 1030603250085366247}
   - component: {fileID: 6140431026443263990}
+  - component: {fileID: 3884098391246044647}
   m_Layer: 0
-  m_Name: Cylinder.032
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4299,6 +4932,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 5607567120872455784, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &3884098391246044647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976119339536014579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &7076360758395245627
 GameObject:
   m_ObjectHideFlags: 0
@@ -4311,6 +4957,7 @@ GameObject:
   - component: {fileID: 3221923619932131196}
   - component: {fileID: 9136845843553509217}
   - component: {fileID: 6140431026850668221}
+  - component: {fileID: 3964146110457296175}
   m_Layer: 0
   m_Name: Cylinder.001
   m_TagString: Untagged
@@ -4392,6 +5039,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -7387706064836869012, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &3964146110457296175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076360758395245627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &7133125207894569462
 GameObject:
   m_ObjectHideFlags: 0
@@ -4404,8 +5064,9 @@ GameObject:
   - component: {fileID: 6422133876646421545}
   - component: {fileID: 1136131006782902290}
   - component: {fileID: 6140431026689213135}
+  - component: {fileID: 4020239923898781924}
   m_Layer: 0
-  m_Name: Cube.021
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4485,6 +5146,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2746142260806068395, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &4020239923898781924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7133125207894569462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &7214357897763001078
 GameObject:
   m_ObjectHideFlags: 0
@@ -4497,6 +5171,7 @@ GameObject:
   - component: {fileID: 7630619588747551947}
   - component: {fileID: 5907358740146594610}
   - component: {fileID: 6140431026676106504}
+  - component: {fileID: 3542570615482790884}
   m_Layer: 0
   m_Name: Cylinder.017
   m_TagString: Untagged
@@ -4578,6 +5253,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -8024611349946882221, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &3542570615482790884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214357897763001078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &7480826830458142574
 GameObject:
   m_ObjectHideFlags: 0
@@ -4590,8 +5278,9 @@ GameObject:
   - component: {fileID: 8353781938967778066}
   - component: {fileID: 4471197296686020818}
   - component: {fileID: 6140431027372876211}
+  - component: {fileID: 3667633384249564796}
   m_Layer: 0
-  m_Name: Cube.006
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4671,6 +5360,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2228417370725966487, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &3667633384249564796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480826830458142574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &7851702250104979052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,8 +5385,9 @@ GameObject:
   - component: {fileID: 6903741570061216078}
   - component: {fileID: 1417880492200955546}
   - component: {fileID: 6140431026258899376}
+  - component: {fileID: 4161863600350191482}
   m_Layer: 0
-  m_Name: Cylinder.037
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4764,6 +5467,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 2762472744948416827, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &4161863600350191482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851702250104979052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &7918094512282230577
 GameObject:
   m_ObjectHideFlags: 0
@@ -4776,6 +5492,7 @@ GameObject:
   - component: {fileID: 2506684541071407122}
   - component: {fileID: 3342990191399737156}
   - component: {fileID: 6140431026258032580}
+  - component: {fileID: 4095329509764070949}
   m_Layer: 0
   m_Name: Cylinder.024
   m_TagString: Untagged
@@ -4857,6 +5574,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7835944207358130237, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &4095329509764070949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918094512282230577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &7974396996421357065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4870,6 +5600,7 @@ GameObject:
   - component: {fileID: 3114742130286377325}
   - component: {fileID: 6140431027088912380}
   - component: {fileID: 7972461714017187884}
+  - component: {fileID: 4295746493673320221}
   m_Layer: 9
   m_Name: Cube.017
   m_TagString: Untagged
@@ -4963,6 +5694,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ede78b458b05c46ba05b1d09854e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+--- !u!114 &4295746493673320221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7974396996421357065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &8212044450860697025
 GameObject:
   m_ObjectHideFlags: 0
@@ -4975,6 +5720,7 @@ GameObject:
   - component: {fileID: 2811513185941097369}
   - component: {fileID: 1349968971414788350}
   - component: {fileID: 6140431025769648732}
+  - component: {fileID: 2648182101700060373}
   m_Layer: 0
   m_Name: Cylinder.013
   m_TagString: Untagged
@@ -5056,6 +5802,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 5009161486953370047, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &2648182101700060373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212044450860697025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &8429259073415424707
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,6 +5827,7 @@ GameObject:
   - component: {fileID: 4855852099678976306}
   - component: {fileID: 2124909516150906715}
   - component: {fileID: 6140431026652011178}
+  - component: {fileID: 2435760254702455767}
   m_Layer: 0
   m_Name: Cylinder.011
   m_TagString: Untagged
@@ -5149,6 +5909,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -7994650926060863905, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &2435760254702455767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429259073415424707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &8725691883249248944
 GameObject:
   m_ObjectHideFlags: 0
@@ -5161,8 +5934,9 @@ GameObject:
   - component: {fileID: 4774667175820873671}
   - component: {fileID: 3339834624779836218}
   - component: {fileID: 6140431026794754071}
+  - component: {fileID: 3179774390266006438}
   m_Layer: 0
-  m_Name: Cube.015
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5242,6 +6016,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -3537709356157935800, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &3179774390266006438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8725691883249248944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &8964991715174375447
 GameObject:
   m_ObjectHideFlags: 0
@@ -5254,8 +6041,9 @@ GameObject:
   - component: {fileID: 4336085464256047479}
   - component: {fileID: 7140758200698490540}
   - component: {fileID: 6140431026292053755}
+  - component: {fileID: 2980605646118699267}
   m_Layer: 0
-  m_Name: Cube.019
+  m_Name: SolarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5335,6 +6123,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -3541629673168548286, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &2980605646118699267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964991715174375447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 5
 --- !u!1 &8993939338761040036
 GameObject:
   m_ObjectHideFlags: 0
@@ -5348,6 +6149,7 @@ GameObject:
   - component: {fileID: 5069238518932694608}
   - component: {fileID: 6140431027722679880}
   - component: {fileID: 6866059991497887258}
+  - component: {fileID: 3019616620376445362}
   m_Layer: 9
   m_Name: Cube.000
   m_TagString: Untagged
@@ -5441,6 +6243,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ede78b458b05c46ba05b1d09854e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+--- !u!114 &3019616620376445362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993939338761040036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20
 --- !u!1 &9165656979743335027
 GameObject:
   m_ObjectHideFlags: 0
@@ -5453,6 +6269,7 @@ GameObject:
   - component: {fileID: 7290609863412043373}
   - component: {fileID: 8501807729979855389}
   - component: {fileID: 6140431027061127631}
+  - component: {fileID: 3028042973088203623}
   m_Layer: 0
   m_Name: Cylinder.008
   m_TagString: Untagged
@@ -5534,3 +6351,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 5512361600001258384, guid: e683edd928335cb4bbd95b1057d1ba52, type: 3}
+--- !u!114 &3028042973088203623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9165656979743335027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1990e99327492964fb902b57f810232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 20

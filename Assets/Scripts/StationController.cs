@@ -19,7 +19,14 @@ namespace Astronaut
 
         private void FixedUpdate()
         {
-            healthSlider.value = health / maxHealth;
+            float current = healthSlider.value;
+            float target = health / maxHealth;
+            healthSlider.value += (target - current) * 2f * Time.fixedDeltaTime;
+        }
+
+        public void Hit(float dmg)
+        {
+            health -= dmg;
         }
     }
 }
