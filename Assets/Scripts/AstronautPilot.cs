@@ -24,9 +24,10 @@ namespace Astronaut
 
         [SerializeField] LayerMask fixPointLayer;
 
-        bool dampen = false;
-
+        //Animation and visuals
         AstronautAnimController anim;
+
+        [SerializeField] JetpackController jc;
 
         [SerializeField] Transform cameraTransform;
 
@@ -50,8 +51,12 @@ namespace Astronaut
         float torqueFuelConsumption = 0.07f;
         float translationFuelConsumption = 0.013f;
 
+        //Station
+        StationController station;
+
         private void Start()
         {
+            station = GameObject.FindGameObjectWithTag("Station").GetComponent<StationController>();
             rb = GetComponent<Rigidbody>();
             anim = new AstronautAnimController(GetComponentInChildren<Animator>());
 
@@ -65,7 +70,10 @@ namespace Astronaut
         {
             if (oxygen <= 0) return;
 
-            if (Input.GetKeyDown(KeyCode.Joystick1Button5) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+            if (Input.GetKeyDown(KeyCode.Joystick1Button5)
+                || Input.GetKeyDown(KeyCode.Joystick1Button0)
+                || Input.GetKeyDown(KeyCode.E)
+                || Input.GetKeyDown(KeyCode.Space))
                 TryInteractNearby();
         }
 
@@ -114,12 +122,17 @@ namespace Astronaut
                 float rightRot = Vector3.Dot(transform.up, rb.angularVelocity);
                 anim.TurnRight(rightRot);
                 fuel -= (finalTorque.magnitude * torqueFuelConsumption + finalTranslation.magnitude * translationFuelConsumption) * Time.fixedDeltaTime;
+                jc.Forward(animDir.z);
+                jc.Up(animDir.y);
+                jc.Right(animDir.x);
+                jc.TurnRight(rightRot);
             }
 
             oxygen -= oxygenConsumption * Time.fixedDeltaTime;
 
             oxygenSlider.value = oxygen / maxOxygen;
             fuelSlider.value = fuel / maxFuel;
+
         }
 
         private void PaintSliders()
@@ -155,6 +168,22 @@ namespace Astronaut
                     {
                         ressuply.RessuplyAstronaut(this);
                     }
+                }
+            }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            foreach (ContactPoint contact in collision.contacts)
+            {
+                //Debug.Log(contact.thisCollider.gameObject.name);
+                //Debug.Log(contact.otherCollider.gameObject.name);
+                StationPart part = contact.otherCollider.gameObject.GetComponent<StationPart>();
+                if (part != null)
+                {
+                    float dmg = collision.impulse.magnitude;
+                    if (dmg > part.Sensitivity)
+                        station.Hit(dmg * 10 / part.Sensitivity);
                 }
             }
         }

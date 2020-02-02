@@ -31,31 +31,44 @@ namespace Astronaut
         //readonly float dmgRateWhenBroken = 30f;
         //readonly float explosionDmg = 500f;
 
-        readonly float maxDuration = 150f;
-        readonly float minDurarion = 100f;
+        //private DifficultySettings settings;
+        private static int settingId = 0;
 
-        float duration = 150f;
-        readonly float minRepair = 0.66f;
-        readonly float maxTimeToExplode = 30f;
-        readonly float dmgRateWhenBroken = 18f;
-        readonly float explosionDmg = 500f;
+        private static readonly DifficultySettings hard = new DifficultySettings(150f, 100f, 0.66f, 30f, 22f, 500f);
+        private static readonly DifficultySettings medium = new DifficultySettings(175f, 130f, 0.73f, 30f, 18f, 500f);
+        private static readonly DifficultySettings easy = new DifficultySettings(175f, 130f, 0.73f, 30f, 18f, 500f);
+        //readonly float maxDuration = 150f;
+        //readonly float minDurarion = 100f;
+        //readonly float minRepair = 0.66f;
+        //readonly float maxTimeToExplode = 30f;
+        //readonly float dmgRateWhenBroken = 22f;
+        //readonly float explosionDmg = 500f;
+        private static readonly DifficultySettings[] settingsList = new DifficultySettings[3]
+        {
+            new DifficultySettings(150f, 100f, 0.66f, 30f, 22f, 500f),
+            new DifficultySettings(175f, 130f, 0.73f, 30f, 18f, 500f),
+            new DifficultySettings(240f, 200f, 0.80f, 50f, 12f, 200f)
+        };
+
+        float duration;
 
         StationController station;
 
         private void Start()
         {
-            station = transform.parent.GetComponent<StationController>();
+            station = transform.parent.GetComponentInParent<StationController>();
             Fix();
-            timeToExplode = maxTimeToExplode;
+            timeToExplode = settingsList[settingId].maxTimeToExplode;
             materialProperty = new MaterialPropertyBlock();
             matRenderer = GetComponent<Renderer>();
 
             sliderImage = healthSlider.transform.Find("Fill Area/Fill").GetComponent<Image>();
+            Debug.Log(duration);
         }
 
         private void FixedUpdate()
         {
-            if (exploded) return;
+            if (exploded || StationController.Win || !StationController.IsAlive) return;
             if (!broken)
             {
                 timeToBreak -= Time.fixedDeltaTime;
@@ -71,9 +84,9 @@ namespace Astronaut
             }
             else
             {
-                station.Hit(dmgRateWhenBroken * Time.fixedDeltaTime);
+                station.Hit(settingsList[settingId].dmgRateWhenBroken * Time.fixedDeltaTime);
                 timeToExplode -= Time.fixedDeltaTime;
-                healthSlider.value = (1 - timeToExplode / maxTimeToExplode);
+                healthSlider.value = (1 - timeToExplode / settingsList[settingId].maxTimeToExplode);
                 if (timeToExplode <= 0)
                 {
                     Explode();
@@ -84,7 +97,7 @@ namespace Astronaut
         private void Explode()
         {
             smoke.Stop();
-            station.Hit(explosionDmg);
+            station.Hit(settingsList[settingId].explosionDmg);
             explosion.Play();
             exploded = true;
             SetColors(Color.black);
@@ -101,7 +114,7 @@ namespace Astronaut
             materialProperty.SetColor("_BaseColor", color);
             matRenderer.SetPropertyBlock(materialProperty);
 
-            
+
             sliderImage.color = color;
             targetIndicator.SetColor(color);
         }
@@ -110,12 +123,43 @@ namespace Astronaut
         {
             if (exploded) return;
 
-            duration = Random.Range(minDurarion, maxDuration);
+            duration = Random.Range(settingsList[settingId].minDurarion, settingsList[settingId].maxDuration);
             smoke.Stop();
-            Debug.Log("Fixed");
-            timeToBreak = Random.Range(minRepair * duration, duration);
-            timeToExplode = maxTimeToExplode;
+            timeToBreak = Random.Range(settingsList[settingId].minRepair * duration, duration);
+            timeToExplode = settingsList[settingId].maxTimeToExplode;
             broken = false;
+        }
+
+        public static void IncreaseDifficulty()
+        {
+            if (settingId > 0)
+                settingId--;
+        }
+
+        public static void DecreaseDifficulty()
+        {
+            if (settingId < settingsList.Length - 1)
+                settingId++;
+        }
+
+        public struct DifficultySettings
+        {
+            public readonly float maxDuration;
+            public readonly float minDurarion;
+            public readonly float minRepair;
+            public readonly float maxTimeToExplode;
+            public readonly float dmgRateWhenBroken;
+            public readonly float explosionDmg;
+
+            public DifficultySettings(float maxDuration, float minDurarion, float minRepair, float maxTimeToExplode, float dmgRateWhenBroken, float explosionDmg)
+            {
+                this.maxDuration = maxDuration;
+                this.minDurarion = minDurarion;
+                this.minRepair = minRepair;
+                this.maxTimeToExplode = maxTimeToExplode;
+                this.dmgRateWhenBroken = dmgRateWhenBroken;
+                this.explosionDmg = explosionDmg;
+            }
         }
     }
 }
