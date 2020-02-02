@@ -6,7 +6,7 @@ namespace Astronaut
 {
     public class FixPoint : MonoBehaviour
     {
-        [SerializeField] Renderer matRenderer = null;
+        Renderer matRenderer = null;
         MaterialPropertyBlock materialProperty;
 
         bool broken = false;
@@ -23,6 +23,7 @@ namespace Astronaut
             Fix();
             timeToExplode = maxTimeToExplode;
             materialProperty = new MaterialPropertyBlock();
+            matRenderer = GetComponent<Renderer>();
         }
 
         private void FixedUpdate()
