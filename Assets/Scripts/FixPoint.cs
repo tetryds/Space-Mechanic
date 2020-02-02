@@ -18,7 +18,7 @@ namespace Astronaut
         float timeToBreak;
         float timeToExplode;
 
-        float maxDuration = 240f;
+        float maxDuration = 120f;
         float minDuration = 60f;
         float maxTimeToExplode = 60f;
 
