@@ -122,10 +122,10 @@ namespace Astronaut
                 float rightRot = Vector3.Dot(transform.up, rb.angularVelocity);
                 anim.TurnRight(rightRot);
                 fuel -= (finalTorque.magnitude * torqueFuelConsumption + finalTranslation.magnitude * translationFuelConsumption) * Time.fixedDeltaTime;
-                jc.Forward(animDir.z);
-                jc.Up(animDir.y);
-                jc.Right(animDir.x);
-                jc.TurnRight(rightRot);
+                //jc.Forward(animDir.z);
+                //jc.Up(animDir.y);
+                //jc.Right(animDir.x);
+                //jc.TurnRight(rightRot);
             }
 
             oxygen -= oxygenConsumption * Time.fixedDeltaTime;

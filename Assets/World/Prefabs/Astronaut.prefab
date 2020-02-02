@@ -5009,6 +5009,7 @@ MonoBehaviour:
     m_Bits: 512
   jc: {fileID: 5437099459756569960}
   cameraTransform: {fileID: 0}
+  hitAudio: {fileID: 0}
   oxygenSlider: {fileID: 0}
   fuelSlider: {fileID: 0}
 --- !u!114 &5437099459756569960
