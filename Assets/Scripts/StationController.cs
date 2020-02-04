@@ -25,6 +25,8 @@ namespace Astronaut
         float gameOverDelayTime = 15f;
         [SerializeField] GameObject gameOverMsg;
 
+        [SerializeField] GameObject pressStartMsg;
+
         [SerializeField] TextMeshProUGUI clock;
 
         private void Start()
@@ -93,7 +95,7 @@ namespace Astronaut
 
         private void HandleResetGameOver()
         {
-            if (Input.anyKey)
+            if (Input.GetKey(KeyCode.Joystick1Button7) || Input.GetKey(KeyCode.Escape))
                 ReloadScene();
         }
 
@@ -105,6 +107,7 @@ namespace Astronaut
         private void HandleWin()
         {
             winMessage.SetActive(true);
+            pressStartMsg.SetActive(true);
         }
 
         public void Hit(float dmg)
@@ -129,7 +132,10 @@ namespace Astronaut
         {
             gameOverDelayTime -= Time.fixedDeltaTime;
             if (gameOverDelayTime <= 0)
+            {
+                pressStartMsg.SetActive(true);
                 gameOverMsg.SetActive(true);
+            }
 
         }
     }
